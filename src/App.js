@@ -1,11 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Header from './component/Navbar/Header';
+import Banner from "./component/Banner/Banner";
+import Header from "./component/Navbar/Header";
 
 function App() {
   return (
-    <div>
-    <Header/>
+    <div className="bg">
+      <Header />
+      <Banner/>
     </div>
   );
 }

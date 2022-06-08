@@ -1,0 +1,23 @@
+.banner {
+  background-color: #252734;
+  margin-top: 100px;
+}
+.banner-left h1 {
+  font-size: 60px;
+}
+.banner-left p {
+  color: #7f8592;
+  font-size: 25px;
+}
+.banner-btn {
+  background-color: #252734;
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 40px;
+  padding: 10px 18px;
+  font-weight: 400;
+}
+.banner-left a {
+  text-decoration: none;
+  color: #fff;
+}
