@@ -16,8 +16,40 @@
   border-radius: 40px;
   padding: 10px 18px;
   font-weight: 400;
+  transition: 0.7s;
+}
+.banner-btn:hover {
+  background-color: #3b3d49;
 }
 .banner-left a {
   text-decoration: none;
   color: #fff;
+}
+
+.icon {
+  font-size: 25px;
+  color: #7c7e8a;
+  margin-left: 10px;
+  margin-top: 30px;
+  transition: 0.5s;
+}
+.icon:hover {
+  color: #fff;
+}
+.icon-div {
+  margin-left: 80px;
+  margin-bottom: 24px;
+}
+.icon-text {
+  font-size: 20px;
+  color: #7c7e8a;
+  position: relative;
+}
+.line {
+  height: 1px;
+  width: 45px;
+  border: 1px solid #7c7e8a;
+  position: absolute;
+  left: 101px;
+  bottom: 10px;
 }

@@ -10,12 +10,12 @@ const Header = () => {
           <Navbar.Brand href="#home">
             <img src={logo} width={"100"} alt="" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Toggle  aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse   id="basic-navbar-nav">
             <Nav className="mx-auto header-link">
               <a href="#home">Home</a>
-              <a href="#link">About</a>
-              <a href="#link">Contact</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
             
             </Nav>
             <div>
