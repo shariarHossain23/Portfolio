@@ -44,6 +44,17 @@
           img1:"https://i.ibb.co/Phnht0Z/blog.png",
           img2:"https://i.ibb.co/crYCKHp/blog2.png",
           img3:"https://i.ibb.co/Y07hhJv/blog-3.png"
+        },
+        {
+          id: "5",
+          name: "Laptop review",
+          about: "This a laptop review.this single frontend website.This website shown customer review 3 in home page and all review show another page.using react rechart with dashboard",
+          link: "https://sparkling-phoenix-8e5872.netlify.app/",
+          picture: "https://i.ibb.co/MRBFn3f/screenshot-3.png",
+          technology: "React js, Bootstrap,React rechart,netlify",
+          img1:"https://i.ibb.co/t2vqw6G/spa2.png",
+          img2:"https://i.ibb.co/VVcLpnj/spa3.png",
+          img3:"https://i.ibb.co/Mhky41Y/screenshot-4.png"
         }
       ]
     
