@@ -48,7 +48,7 @@ const About = () => {
               iteration={1}
             >
               {" "}
-              <h2 className="text-white mb-3">About Me</h2>
+              <h2 className="text-white mb-3 mt-5">About Me</h2>
               <p className="about-text">
                 I am an energetic and imaginative web developer. I am able to
                 work alongside other talented IT professionals in creating

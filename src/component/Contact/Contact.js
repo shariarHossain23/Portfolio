@@ -66,7 +66,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="col-md-6">
-            <form onSubmit={sendEmail}>
+            <form className="mt-5" onSubmit={sendEmail}>
              <div>
               <input type="text" name="name" placeholder="Enter Name Here" required />
              </div>
