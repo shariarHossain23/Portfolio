@@ -1,20 +1,27 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
-import About from "./component/About/About";
-import Banner from "./component/Banner/Banner";
-import Contact from "./component/Contact/Contact";
+import Blog from "./component/Blog/Blog";
 import Fotter from "./component/Fotter/Fotter";
-import MyProject from "./component/MyProject/MyProject";
+import Details from "./component/MyProject/Details";
+import Home from "./component/MyProject/Home";
 import Header from "./component/Navbar/Header";
+
+
 
 function App() {
   return (
     <div className="bg">
+      <ToastContainer></ToastContainer>
       <Header />
-      <Banner/>
-      <MyProject/>
-      <About/>
-      <Contact/>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path='/details/:detailId' element={<Details></Details>}></Route>
+        <Route path="/blog"element={<Blog></Blog>}></Route>
+      </Routes>
       <Fotter/>
     </div>
   );

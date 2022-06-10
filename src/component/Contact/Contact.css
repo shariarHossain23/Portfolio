@@ -9,11 +9,12 @@ input {
   transition: 0.5s;
   outline: none;
   width: 70%;
+  margin-top: 15px;
 }
 .message {
   background-color: #252734;
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   border: 1px solid gray;
   border-radius: 20px;
   padding: 5px 18px;
@@ -21,7 +22,8 @@ input {
   transition: 0.5s;
   outline: none;
   width: 70%;
+  height: 100px;
 }
-p {
+.contact-text p {
   color: #7c7e8a;
 }

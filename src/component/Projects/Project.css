@@ -1,0 +1,59 @@
+.container-card {
+  background: #252734;
+  cursor: pointer;
+  border-radius: 15px;
+  position: relative;
+  padding: 25px 30px;
+  color: var(--primary-color);
+}
+
+.container-card::after {
+  content: "";
+  background: #7f8592;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  clip-path: circle(10% at 0% 0%);
+  transition: all 0.3s ease-in;
+}
+.container-card img {
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+}
+.content p,
+h5 {
+  color: #7f8592;
+}
+.container-card:hover::after {
+  clip-path: circle(100%);
+}
+.container-card:hover .content h5,
+p {
+  color: #252734;
+}
+.container-card:hover .content p {
+  color: #252734;
+}
+.live {
+  background-color: #252734;
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid gray;
+  border-radius: 40px;
+  padding: 5px 18px;
+  font-weight: 400;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.live:hover {
+  color: #fff;
+}

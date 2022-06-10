@@ -1,11 +1,11 @@
-import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import logo from "../../assests/developer.png";
 import "./Header.css";
 const Header = () => {
   return (
-    <div>
-      <Navbar className="header" expand="lg">
+    <div className="sticky-top">
+      <Navbar className="header sticky-top" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
             <img src={logo} width={"100"} alt="" />
@@ -13,9 +13,10 @@ const Header = () => {
           <Navbar.Toggle  aria-controls="basic-navbar-nav" />
           <Navbar.Collapse   id="basic-navbar-nav">
             <Nav className="mx-auto header-link">
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#contact">Contact</a>
+              <Link to="/">Home</Link>
+              <Link to="/home#about">About</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/home#contact">Contact</Link>
             
             </Nav>
             <div>

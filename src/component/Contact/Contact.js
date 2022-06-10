@@ -1,25 +1,32 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 import "./Contact.css";
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => {
-    reset();
+  const sendEmail = (e) => {
+    console.log(e.target.value);
+    e.preventDefault();
+
+    emailjs
+      .sendForm("gmail", "template_hzkp4pv", e.target, "Q5mY-dFHamwP6NJ1S")
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+      e.target.reset()
+      toast.success("Thank for contact me.I will reply soon. ")
   };
   return (
     <div id="contact" className="mt-5">
-      <h2>Contact Me</h2>
+      <h2 className="text-white text-center mb-5">Contact Me</h2>
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center">
-          <div className="col-md-6 ">
+          <div className="col-md-6 contact-text">
             <p>Email: shariarHossain23@gmail.com</p>
             <p>Phone:01641-681072</p>
             <p>Khulna sadar,Khulna,Bangladesh</p>
@@ -58,70 +65,19 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="col-md-6 mx-auto">
-           <div className="mx-auto">
-           <form  action="mailto:shariarhossain23@gmail.com" method="post" enctype="text/plain">
-              <div class="">
-                <label class="label">
-                  <span class="label-text">Your Name</span>
-                </label>{" "}
-                <br />
-                <input
-                  {...register("name", {
-                    required: {
-                      value: true,
-                      message: "Name required",
-                    },
-                  })}
-                  placeholder="Name Here*"
-                  className="block input-field" 
-                />{" "}
-              </div>
-              <div class="">
-                <label class="label">
-                  <span class="label-text">Email</span>
-                </label>{" "}
-                <br />
-                <input
-                  {...register("email", {
-                    required: {
-                      value: true,
-                      message: "email required",
-                    },
-                    pattern: {
-                      value: /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,
-                      message: "provided valid email",
-                    },
-                  })}
-                  placeholder="Email Here*"
-                  className="block input-field "
-                />{" "}
-                <br />
-              </div>
-              <div class="">
-                <label class="label">
-                  <span class="label-text">Email</span>
-                </label>{" "}
-                <br />
-                <textarea
-                  style={{ width: "70%", height: "100px", outline: "none" }}
-                  {...register("message", {
-                    required: {
-                      value: true,
-                      message: "message required",
-                    },
-                  })}
-                  placeholder="Message Here*"
-                  className="message"
-                />{" "}
-                <br />
-
-              </div>
-              <div class=" mt-2">
-              <input className="" type="submit" value="send message"/>
-              </div>
+          <div className="col-md-6">
+            <form onSubmit={sendEmail}>
+             <div>
+              <input type="text" name="name" placeholder="Enter Name Here" required />
+             </div>
+             <div>
+              <input type="email" name="email" placeholder="Enter Email Here" required />
+             </div>
+             <div>
+              <textarea className="message mt-4" name="message" placeholder="Message Here" />
+             </div>
+              <input type="submit" value="Send" />
             </form>
-           </div>
           </div>
         </div>
       </div>
@@ -130,3 +86,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
