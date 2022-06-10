@@ -26,7 +26,7 @@ const Contact = () => {
       <h2 className="text-white text-center mb-5">Contact Me</h2>
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center">
-          <div className="col-md-6 contact-text">
+          <div className="col-md-6 contact-text mx-auto">
             <p>Email: shariarHossain23@gmail.com</p>
             <p>Phone:01641-681072</p>
             <p>Khulna sadar,Khulna,Bangladesh</p>
@@ -65,8 +65,8 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="col-md-6">
-            <form className="mt-5" onSubmit={sendEmail}>
+          <div className="col-md-6 text-center">
+            <form className="mt-5 " onSubmit={sendEmail}>
              <div>
               <input type="text" name="name" placeholder="Enter Name Here" required />
              </div>

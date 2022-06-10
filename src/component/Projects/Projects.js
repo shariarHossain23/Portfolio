@@ -6,7 +6,7 @@ const Projects = ({ project }) => {
   const navigate = useNavigate()
   return (
     <div className="col-md-4 mt-5">
-      <div class="card container-card" style={{ width: "20rem",height:"30rem" }}>
+      <div class="card container-card" style={{ width: "20rem",height:"30rem",margin:"0 auto" }}>
         <img src={picture}  height="200px" class="card-img-top img-fluid" alt="..." />
         <div class="card-body content">
           <h5 class="card-title ">{name}</h5>
